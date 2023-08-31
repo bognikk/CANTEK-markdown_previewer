@@ -1,5 +1,5 @@
 import Header from './components/Header'
-
+import Guide from './components/Guide'
 import './App.css'
 
 function App() {
@@ -10,7 +10,8 @@ function App() {
 
   return (
     <>
-      <Header onToggleGuide={onToggleGuide}/>
+      <Header onToggleGuide={onToggleGuide} />
+      <Guide />
     </>
   )
 }
