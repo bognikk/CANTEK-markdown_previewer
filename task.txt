@@ -1,0 +1,89 @@
+Markdown Previewer
+
+Description:
+In this project, you will be building a Markdown Previewer, a tool that takes user input in
+Markdown format, and displays the converted HTML in real time. This project is built using
+React and TypeScript. This is a practical tool that would be useful in a real-world context and
+would make a great addition to your portfolio.
+
+Project Setup:
+1. Open your terminal, navigate to the folder where you want to create your project, and
+type npx create-vite markdown-previewer --template react-ts. This will create a new
+project folder with a React and TypeScript template.
+2. Navigate into your new project folder with cd markdown-previewer.
+3. Install the necessary dependencies for this project. Run npm install react-markdown
+and npm install styled-components@latest @types/styled-components.
+Steps to Commit Changes to Git/GitHub in Visual Studio Code:
+1. Open Visual Studio Code.
+2. Open your project folder (via File &gt; Open Folder).
+3. Click on the Source Control icon in the Activity Bar.
+4. Click on Publish to GitHub and choose whether the repository should be public or
+private.
+5. Select the files you want to include in the GitHub repository and click OK.
+6. When you add new features or make changes, go to the Source Control tab, click Stage
+All (the + icon), add a commit message, and then click the dropdown arrow next to
+Commit. Select Commit and Push.
+7. Confirm the successful push by checking your GitHub account.
+
+Coding Steps:
+Step 2: File Structure
+1. Inside the src directory, create a new folder called components.
+2. Inside the components folder, create five files: Header.js, MarkdownGuide.js,
+MarkdownInput.js, MarkdownOutput.js, and App.js.
+Step 3: Implementing Components
+1. Header Component:
+1. Define a styled container named HeaderContainer using the styled-components
+library. This container will be used to hold the title and button within the header.
+2. Next, create two additional styled-components, Title and Button. Each of these
+components is assigned specific CSS properties. For instance, the Button
+component includes a &amp;:hover CSS rule that changes the background color of
+the button when it&#39;s hovered over.
+3. Define the Header functional component. This component accepts a single prop,
+onToggleGuide. The onToggleGuide is described using an interface HeaderProps
+as a function that doesn&#39;t take any argument and doesn&#39;t return anything. It is
+
+utilized as the onClick handler for the Button, which means this function will be
+executed when the Button is clicked.
+
+2. MarkdownGuide Component:
+1. Similar to the Header, a GuideContainer styled-component is defined to hold the
+Markdown guide.
+2. The MarkdownGuide component displays a list of common Markdown syntaxes
+inside the GuideContainer. These syntaxes are denoted by the HTML &lt;code&gt; tag
+to visually separate them from regular text.
+
+3. MarkdownInput Component:
+1. Define two styled-components: InputContainer and StyledTextArea. The
+InputContainer sets the dimensions for the textarea container, while the
+StyledTextArea includes CSS for the textarea that users will type their Markdown
+into.
+2. Next, define the MarkdownInput component. This component takes two props
+value and onChange, both of which are described using the
+MarkdownInputProps interface. The value prop is a string that corresponds to
+the current Markdown text. The onChange prop is a function that handles
+changes to the textarea. In the returned JSX, the StyledTextArea uses these two
+props.
+
+4. MarkdownOutput Component:
+1. A OutputContainer styled-component is defined for the container that will
+display the converted Markdown.
+2. The MarkdownOutput component accepts a single prop, markdown, defined by
+the MarkdownOutputProps interface. This prop is the Markdown text to be
+converted. The react-markdown library uses this text as its children to convert it
+into HTML.
+
+Step 4: Implementing the App Component
+In the App.js file, create a functional component named App.
+1. Define the initial state for the markdown text and a boolean to toggle the guide.
+ const [markdown, setMarkdown] = useState(`# Hello World`);
+ const [showGuide, setShowGuide] = useState(false);
+2. Create an event handler handleChange to update the markdown text when the user
+types in the textarea.
+3. In the return statement of App, add the Header component (passing the onToggleGuide
+function as a prop), the MarkdownGuide component (if showGuide is true), and the
+Container with MarkdownInput and MarkdownOutput as children.
+After implementing all of these, you will have a fully functioning Markdown previewer app built
+with React and styled-components!
+Remember to commit your changes after each step with appropriate commit messages to track
+your progress efficiently.
+Finally create a README.md file for this project.

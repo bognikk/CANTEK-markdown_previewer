@@ -1,12 +1,16 @@
+import Header from './components/Header'
+
 import './App.css'
 
 function App() {
 
+  const onToggleGuide = () => {
+    console.log('ontoggle')
+  }
+
   return (
     <>
-      <div>
-        <h3>Let's start!</h3>
-      </div>
+      <Header onToggleGuide={onToggleGuide}/>
     </>
   )
 }
