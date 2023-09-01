@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from './components/Header'
 import Guide from './components/Guide'
 import Input from './components/Input'
+import Output from './components/Output'
 import './App.css'
 
 import styled from 'styled-components';
@@ -36,6 +37,7 @@ function App() {
         {showGuide && <Guide />}
         <Container>
           <Input onChange={handleChange} value={markdown} />
+          <Output markdown={markdown} />
         </Container>
       </FlexContainer>
     </>

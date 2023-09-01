@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import MarkdownList from './UI/MarkdownList';
+import List from './UI/List';
 
 const Guide = styled.div`
   background-color: #444;
@@ -38,7 +38,7 @@ const MarkdownGuide = () => {
   return (
     <Guide>
       <h2>Basic Markdown syntaxes</h2>
-      <MarkdownList data={markdownSyntaxes} />
+      <List data={markdownSyntaxes} />
     </Guide>
   );
 };
