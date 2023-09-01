@@ -2,12 +2,13 @@ import styled from 'styled-components';
 import MarkdownList from './UI/MarkdownList';
 
 const Guide = styled.div`
-  background-color: #f7f7f7;
+  background-color: #444;
   padding: 10px;
   width: 20%;
   border-radius: 4px;
   margin-top: 20px;
-  color: #000;
+  color: #f7f7f7;
+  font-weight: 700;
 
   ul {
     list-style: none;
