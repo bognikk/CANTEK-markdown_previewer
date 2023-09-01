@@ -37,7 +37,7 @@ const MarkdownGuide = () => {
 
   return (
     <Guide>
-      <h2>Basic Markdown syntaxes</h2>
+      <h2>Basic Markdown Syntaxes</h2>
       <List data={markdownSyntaxes} />
     </Guide>
   );
